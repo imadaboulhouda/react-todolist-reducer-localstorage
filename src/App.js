@@ -1,16 +1,12 @@
-import React from 'react';
-import './css/header.css';
-import Home from './comp/Home';
-import HeaderZone from './comp/Header';
-import { TodoAppProvider } from './context/cp';
+import React from "react";
+import Home from "./pages/Home";
+import { TodoAppProvider } from "./context/cp";
 function App() {
   return (
     <React.Fragment>
       <TodoAppProvider>
-        <HeaderZone></HeaderZone>
-     <Home />
+        <Home />
       </TodoAppProvider>
-      
     </React.Fragment>
   );
 }
