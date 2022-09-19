@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./pages/Home";
-import { TodoAppProvider } from "./context/cp";
+import { TodoAppProvider } from "./context/TodoAppProvider";
 function App() {
   return (
     <React.Fragment>
