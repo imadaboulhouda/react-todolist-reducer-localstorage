@@ -1,5 +1,12 @@
 import React from "react";
-export const TaskItem = ({ id, name, date_item, removeTodo }) => {
+import { TodoInterface } from "../../context/TodoInterface";
+type Iprops = {
+  id: string;
+  name: string;
+  date_item: string;
+  removeTodo: (id: string) => void;
+};
+export const TaskItem = ({ id, name, date_item, removeTodo }: Iprops) => {
   return (
     <div key={id} className={"listItem"}>
       <div className="ListDate">

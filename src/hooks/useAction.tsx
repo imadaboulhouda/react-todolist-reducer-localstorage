@@ -3,7 +3,7 @@ import { TodoApp } from "../context/TodoAppProvider";
 
 const useAction = () => {
   const { statex, removeTodox } = useContext(TodoApp);
-  const removeTodo = (id) => {
+  const removeTodo = (id: string) => {
     removeTodox(id);
   };
   return { statex, removeTodo };

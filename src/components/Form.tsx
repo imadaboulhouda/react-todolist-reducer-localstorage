@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
-import { TodoApp } from "../context/TodoAppProvider";
+import React, { useState, useContext, Context } from "react";
+import { GlobalContext, TodoApp } from "../context/TodoAppProvider";
 
-const Form = () => {
+const Form: React.FC = () => {
   const [data, setData] = useState("");
   const { addTodox } = useContext(TodoApp);
-  const Change = (e) => {
+  const Change = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setData(e.target.value);
   };
   const add = () => {

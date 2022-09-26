@@ -3,7 +3,7 @@ import TaskList from "../components/Task/TaskList";
 import Forma from "../components/Form";
 const Header = lazy(() => import("../components/Header/Header"));
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <React.Fragment>
       <Suspense fallback={""}>
