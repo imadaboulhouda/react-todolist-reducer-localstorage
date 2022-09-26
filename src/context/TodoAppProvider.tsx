@@ -52,13 +52,11 @@ export const TodoAppProvider = (props: any) => {
   };
   return (
     <TodoApp.Provider
-      value={
-        {
-          statex,
-          addTodox,
-          removeTodox,
-        } as GlobalContext
-      }
+      value={{
+        statex,
+        addTodox,
+        removeTodox,
+      }}
     >
       {props.children}
     </TodoApp.Provider>
