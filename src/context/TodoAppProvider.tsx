@@ -1,4 +1,4 @@
-import React, { Context, createContext } from "react";
+import React, { createContext } from "react";
 import { useReducer, useEffect } from "react";
 import { ADD_TODO, REMOVE_TODO, TodoReducer } from "./reducer";
 
@@ -15,11 +15,7 @@ export const TodoApp = createContext<GlobalContext>({
   removeTodox() {},
   statex: null,
 });
-type Dispatch = (action: { type: string; todos?: TodoInterface }) => void;
-type ISD = {
-  statex: never;
-  dispatch: Dispatch;
-};
+
 export const TodoAppProvider = (props: any) => {
   const [statex, dispatch] = useReducer(TodoReducer, [], () => {
     let local = localStorage.getItem("todoList");
